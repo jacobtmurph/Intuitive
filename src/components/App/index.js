@@ -1,13 +1,34 @@
 import React, {useState} from 'react'
-import logo from '../../logo.svg';
+import '../CharList'
 import {Provider} from '../Context';
-import './App.css';
+import CharacterList from '../CharList';
+
 
 const App = () => {
-  const [characters, setCharacters]= useState([]);
+  // Set the inital state of the characters available to an empty array. 
+  const [characters, setCharacters]= useState([
+    {
+      name: 'Ilamin',
+      characterClass: 'Warlock',
+      roll: 15,
+    },
+    {
+      name: 'Therelor',
+      characterClass: 'Wizard',
+      roll: 5,
+    },
+  ]);
 
-  const addCharacter = (newCharacter) => {
-    return setCharacters(characters => [...characters, newCharacter]);
+  // Append new character to the characters array.
+  const addCharacter = (charName, charClass, initiativeRoll) => {
+    return setCharacters(characters => {
+      return [...characters, 
+              {
+                name: charName,
+                characterClass: charClass,
+                roll: initiativeRoll,
+              }]
+    });
   }
   
   
@@ -18,8 +39,7 @@ const App = () => {
         addChar: addCharacter,
       }
     }}>
-      <div>
-      </div>
+      <CharacterList />
     </Provider>
   );
 }
