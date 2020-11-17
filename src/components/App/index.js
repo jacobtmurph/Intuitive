@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Provider} from '../Context';
 import {CharacterInput} from '../CharInput';
 import {CharacterList} from '../CharList';
+import '../../assets/main.css'
 
 
 const App = () => {
