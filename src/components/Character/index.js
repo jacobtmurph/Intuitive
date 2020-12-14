@@ -1,6 +1,7 @@
 export const Character = ({name, charClass, turnOrder, roll}) => (
-    <div>
-        <h1>{turnOrder} ({roll}), {name}: {charClass}</h1>
+    <div className="flex flex-row text-xl">
+        <p className="mx-0">{turnOrder}({roll})</p>
+        <p className="mx-6">{name} ({charClass})</p>
     </div>
 )
 

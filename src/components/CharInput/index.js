@@ -18,7 +18,7 @@ export const CharacterInput = () => {
                     <label htmlFor="charClass">Class:</label>
                     <select required="required" name="charClass" onChange={handleDataChange}>
                         <option>Choose a class.</option>
-                        <option value="Artigicer">Artificer</option>
+                        <option value="Artificer">Artificer</option>
                         <option value="Barbarian">Barbarian</option>
                         <option value="Bard">Bard</option>
                         <option value="Blood Hunter">Blood Hunter</option>

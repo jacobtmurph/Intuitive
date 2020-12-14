@@ -20,8 +20,17 @@ const App = () => {
       chars: characters,
       addChar: addCharacter,
     }}>
-      <CharacterList />
-      <CharacterInput />
+      <div className="container text-center mx-auto">
+        <div className="flex flex-row justify-center text-2xl divide-x divide-black">
+          <h1 className="px-4">Roll</h1>
+          <h1 className="px-4">Character (class)</h1>
+          <h1 className="px-4">Turn Options</h1>
+        </div>
+        <div className="divide-y divide-black">
+          <CharacterList />
+        </div>
+        <CharacterInput />
+      </div>
     </Provider>
   );
 }
